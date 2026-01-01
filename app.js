@@ -108,15 +108,6 @@ const MP = (() => {
     return data.recipes.find(r => r.name.toLowerCase() === key) || null;
   }
 
-  function initPWA() {
-    // Service worker
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("sw.js").catch(() => {});
-      });
-    }
-  }
-
   // ------------------ Plan page ------------------
   async function pagePlanInit() {
     const weekList = document.getElementById("weekList");
@@ -563,7 +554,6 @@ const MP = (() => {
   }
 
   return {
-    initPWA,
     pagePlanInit,
     pageRecipesInit,
     pageGroceryInit
