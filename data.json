@@ -1,0 +1,35 @@
+{
+  "recipes": [
+    {
+      "name": "Spaghetti",
+      "ingredients": ["tomato sauce", "noodles", "beef"],
+      "steps": [
+        "Bring a pot of water to a boil and put the noodles in",
+        "Place beef into skillet and cook until brown",
+        "Drain the noodles and put into skillet with beef",
+        "Add spaghetti sauce"
+      ]
+    },
+    {
+      "name": "Tacos",
+      "ingredients": ["tortillas", "ground beef", "taco seasoning", "lettuce", "cheddar", "salsa"],
+      "steps": [
+        "Brown the ground beef",
+        "Add taco seasoning and a splash of water; simmer",
+        "Warm tortillas",
+        "Assemble tacos with toppings"
+      ]
+    },
+    {
+      "name": "Chicken Stir Fry",
+      "ingredients": ["chicken", "mixed vegetables", "soy sauce", "garlic", "rice"],
+      "steps": [
+        "Cook rice",
+        "Sauté garlic, then cook chicken until done",
+        "Add vegetables and cook until tender-crisp",
+        "Add soy sauce and toss; serve over rice"
+      ]
+    }
+  ],
+  "Meals": ["", "Spaghetti", "Tacos", "", "Chicken Stir Fry", "", ""]
+}

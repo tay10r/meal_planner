@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Meal Planner — Grocery</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__title">Meal Planner</div>
+    <div class="topbar__subtitle">Grocery list (tap to check off)</div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="card__header">
+        <h2 class="card__title">This Week’s Ingredients</h2>
+        <button id="rebuildBtn" class="btn btn--secondary btn--compact">Refresh</button>
+      </div>
+
+      <div id="groceryMeta" class="muted small"></div>
+
+      <div id="groceryList" class="grocery"></div>
+
+      <div class="muted small">
+        Checks reset whenever you reload this page (by design).
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottomnav">
+    <a class="bottomnav__item" href="index.html">
+      <span class="bottomnav__icon">📅</span>
+      <span class="bottomnav__label">Plan</span>
+    </a>
+    <a class="bottomnav__item" href="recipes.html">
+      <span class="bottomnav__icon">📖</span>
+      <span class="bottomnav__label">Recipes</span>
+    </a>
+    <a class="bottomnav__item bottomnav__item--active" href="grocery.html" aria-current="page">
+      <span class="bottomnav__icon">🛒</span>
+      <span class="bottomnav__label">Grocery</span>
+    </a>
+  </nav>
+
+  <script src="app.js"></script>
+  <script>
+    MP.initPWA();
+    MP.pageGroceryInit();
+  </script>
+</body>
+</html>

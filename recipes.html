@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Meal Planner — Recipes</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__title">Meal Planner</div>
+    <div class="topbar__subtitle">Recipe editor</div>
+  </header>
+
+  <main class="container twoCol">
+    <section class="card listPane">
+      <div class="card__header">
+        <h2 class="card__title">Recipes</h2>
+        <button id="newRecipeBtn" class="btn btn--primary btn--compact">+ New</button>
+      </div>
+
+      <input id="recipeSearch" class="input" placeholder="Search recipes…" autocomplete="off" />
+
+      <div id="recipeList" class="list"></div>
+    </section>
+
+    <section class="card editorPane">
+      <div class="card__header">
+        <h2 class="card__title">Edit</h2>
+        <div class="row">
+          <button id="deleteRecipeBtn" class="btn btn--danger btn--compact">Delete</button>
+          <button id="saveRecipeBtn" class="btn btn--secondary btn--compact">Save</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Name</label>
+        <input id="recipeName" class="input" placeholder="e.g., Spaghetti" />
+      </div>
+
+      <div class="split">
+        <div class="panel">
+          <div class="panel__header">
+            <h3 class="panel__title">Ingredients</h3>
+            <button id="addIngredientBtn" class="btn btn--secondary btn--compact">+ Add</button>
+          </div>
+          <div id="ingredients" class="stack"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__header">
+            <h3 class="panel__title">Steps</h3>
+            <button id="addStepBtn" class="btn btn--secondary btn--compact">+ Add</button>
+          </div>
+          <div id="steps" class="stack"></div>
+        </div>
+      </div>
+
+      <div id="toastHost" class="toastHost" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <nav class="bottomnav">
+    <a class="bottomnav__item" href="index.html">
+      <span class="bottomnav__icon">📅</span>
+      <span class="bottomnav__label">Plan</span>
+    </a>
+    <a class="bottomnav__item bottomnav__item--active" href="recipes.html" aria-current="page">
+      <span class="bottomnav__icon">📖</span>
+      <span class="bottomnav__label">Recipes</span>
+    </a>
+    <a class="bottomnav__item" href="grocery.html">
+      <span class="bottomnav__icon">🛒</span>
+      <span class="bottomnav__label">Grocery</span>
+    </a>
+  </nav>
+
+  <script src="app.js"></script>
+  <script>
+    MP.initPWA();
+    MP.pageRecipesInit();
+  </script>
+</body>
+</html>
